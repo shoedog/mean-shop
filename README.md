@@ -33,48 +33,47 @@ Running `npm test` will run the unit tests with karma.
 
 ##Folder Structure
 
- meanshop 
- ├── client 
- │ ├── app - App specific components 
- │ ├── assets - Custom assets: fonts, images, etc… 
- │ └── components - Non-app specific/reusable components 
- │ 
- ├── e2e - Protractor end to end tests 
- │ 
- └── server 
-      ├── api - Apps server API 
-      ├── auth - Authentication handlers 
-      ├── components - App-wide/reusable components 
-      ├── config - App configuration
-      │ └── local.env.js - Environment variables 
-      │ └── environment - Node environment configuration 
-      └── views - Server rendered views
+      meanshop 
+      ├── client 
+      │ ├── app - App specific components 
+      │ ├── assets - Custom assets: fonts, images, etc… 
+      │ └── components - Non-app specific/reusable components 
+      │ 
+      ├── e2e - Protractor end to end tests 
+      │ 
+      └── server 
+        ├── api - Apps server API 
+        ├── auth - Authentication handlers 
+        ├── components - App-wide/reusable components 
+        ├── config - App configuration
+        │ └── local.env.js - Environment variables 
+        │ └── environment - Node environment configuration 
+        └── views - Server rendered views
+     
+      meanshop/client/app/main 
+      ├── main.js - Routes 
+      ├── main.controller.js - Controller 
+      ├── main.controller.spec.js - Test 
+      ├── main.html - View
+      └── main.scss - Styles
+      
+      meanshop/server/api/thing 
+      ├── index.js - Routes 
+      ├── thing.controller.js - Controller 
+      ├── thing.model.js - Database model 
+      ├── thing.socket.js - Socket events 
+      └── thing.spec.js - Test
       
  1. The client folder contains the AngularJS files and assets
- 
- meanshop/client/app/main 
- ├── main.js - Routes 
- ├── main.controller.js - Controller 
- ├── main.controller.spec.js - Test 
- ├── main.html - View
- └── main.scss - Styles
 
  2. The server folder contains the NodeJS files, which handle ExpressJS and MongoDB
- 
- meanshop/server/api/thing 
- ├── index.js - Routes 
- ├── thing.controller.js - Controller 
- ├── thing.model.js - Database model 
- ├── thing.socket.js - Socket events 
- └── thing.spec.js - Test
-
+    
  3. The e2e files contain the AngularJS end-to-end tests.
     *Karma: the JS unit test runner
     *Jasmine: The BDD framework for testing JS code, executed with Karma
     *Protractor: end to end testing with AngularJS.
      
  4. The node_modules folder contains the requires modules for this project
- 
  
  ##Tools
  1. GruntJS: This tool serves to automate repetitive tasks such as CSS/JS minification, compilation, unit testing, and JS linting.
